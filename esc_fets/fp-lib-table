@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name blheli_esc)(type KiCad)(uri /home/eitan/Documents/quad_copter/blheli_esc)(options "")(descr ""))
+  (lib (name esc_fets)(type KiCad)(uri /home/eitan/Documents/breakouts/esc_fets)(options "")(descr ""))
+)

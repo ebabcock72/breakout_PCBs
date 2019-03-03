@@ -1,0 +1,271 @@
+EESchema Schematic File Version 4
+LIBS:fets2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L blheli_esc:IRF7317PbF FET1
+U 1 1 5C794148
+P 5050 2750
+F 0 "FET1" H 5050 3125 50  0000 C CNN
+F 1 "IRF7317PbF" H 5050 3034 50  0000 C CNN
+F 2 "blheli_esc:IRF7317PbF" H 5050 2750 50  0001 C CNN
+F 3 "" H 5050 2750 50  0001 C CNN
+	1    5050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0101
+U 1 1 5C7942BF
+P 4600 2800
+F 0 "#PWR0101" H 4600 2650 50  0001 C CNN
+F 1 "+BATT" V 4615 2927 50  0000 L CNN
+F 2 "" H 4600 2800 50  0001 C CNN
+F 3 "" H 4600 2800 50  0001 C CNN
+	1    4600 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C794323
+P 4600 2600
+F 0 "#PWR0102" H 4600 2350 50  0001 C CNN
+F 1 "GND" V 4605 2472 50  0000 R CNN
+F 2 "" H 4600 2600 50  0001 C CNN
+F 3 "" H 4600 2600 50  0001 C CNN
+	1    4600 2600
+	0    1    1    0   
+$EndComp
+Text GLabel 4100 2700 0    50   Input ~ 0
+P
+Text GLabel 4100 2900 0    50   Input ~ 0
+C
+$Comp
+L blheli_esc:PAD PAD1
+U 1 1 5C79438F
+P 7550 2450
+F 0 "PAD1" H 7423 2409 50  0000 R CNN
+F 1 "OUT" H 7423 2500 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7650 2450 50  0001 C CNN
+F 3 "" H 7650 2450 50  0001 C CNN
+	1    7550 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4600 2600 4750 2600
+Wire Wire Line
+	4600 2800 4750 2800
+Wire Wire Line
+	4100 2700 4750 2700
+Wire Wire Line
+	4100 2900 4750 2900
+Wire Wire Line
+	5350 2600 5350 2700
+Connection ~ 5350 2700
+Connection ~ 5350 2800
+Wire Wire Line
+	5350 2800 5350 2900
+Wire Wire Line
+	5350 2700 5350 2750
+Text GLabel 5600 2750 2    50   Output ~ 0
+OUT
+Wire Wire Line
+	5350 2750 5500 2750
+Connection ~ 5350 2750
+Wire Wire Line
+	5350 2750 5350 2800
+$Comp
+L Device:R_US R1
+U 1 1 5C794630
+P 5500 3000
+F 0 "R1" H 5432 2954 50  0000 R CNN
+F 1 "10k" H 5432 3045 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5540 2990 50  0001 C CNN
+F 3 "~" H 5500 3000 50  0001 C CNN
+	1    5500 3000
+	-1   0    0    1   
+$EndComp
+Text GLabel 5600 3250 2    50   Output ~ 0
+SENSE
+Wire Wire Line
+	5500 2850 5500 2750
+Connection ~ 5500 2750
+Wire Wire Line
+	5500 2750 5600 2750
+Wire Wire Line
+	5500 3150 5500 3250
+Wire Wire Line
+	5500 3250 5600 3250
+$Comp
+L blheli_esc:PAD PAD4
+U 1 1 5C794894
+P 7550 3900
+F 0 "PAD4" H 7423 3859 50  0000 R CNN
+F 1 "+" H 7423 3950 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7650 3900 50  0001 C CNN
+F 3 "" H 7650 3900 50  0001 C CNN
+	1    7550 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L blheli_esc:PAD PAD5
+U 1 1 5C7948B6
+P 7550 4200
+F 0 "PAD5" H 7423 4159 50  0000 R CNN
+F 1 "-" H 7423 4250 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7650 4200 50  0001 C CNN
+F 3 "" H 7650 4200 50  0001 C CNN
+	1    7550 4200
+	-1   0    0    1   
+$EndComp
+Text GLabel 7200 2450 0    50   Input ~ 0
+OUT
+Wire Wire Line
+	7200 2450 7350 2450
+$Comp
+L power:+BATT #PWR0103
+U 1 1 5C794996
+P 7200 3850
+F 0 "#PWR0103" H 7200 3700 50  0001 C CNN
+F 1 "+BATT" H 7215 4023 50  0000 C CNN
+F 2 "" H 7200 3850 50  0001 C CNN
+F 3 "" H 7200 3850 50  0001 C CNN
+	1    7200 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3850 7200 3900
+Wire Wire Line
+	7200 3900 7350 3900
+$Comp
+L power:GND #PWR0104
+U 1 1 5C794A68
+P 7200 4250
+F 0 "#PWR0104" H 7200 4000 50  0001 C CNN
+F 1 "GND" H 7205 4077 50  0000 C CNN
+F 2 "" H 7200 4250 50  0001 C CNN
+F 3 "" H 7200 4250 50  0001 C CNN
+	1    7200 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 4250 7200 4200
+Wire Wire Line
+	7200 4200 7350 4200
+$Comp
+L power:GND #PWR0105
+U 1 1 5C7951E7
+P 2350 3550
+F 0 "#PWR0105" H 2350 3300 50  0001 C CNN
+F 1 "GND" H 2355 3377 50  0000 C CNN
+F 2 "" H 2350 3550 50  0001 C CNN
+F 3 "" H 2350 3550 50  0001 C CNN
+	1    2350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3450 2350 3450
+Wire Wire Line
+	2350 3450 2350 3550
+Text GLabel 2350 3350 2    50   Input ~ 0
+SENSE
+Text GLabel 2350 3150 2    50   Output ~ 0
+C
+Text GLabel 2350 3250 2    50   Output ~ 0
+P
+Wire Wire Line
+	2150 3350 2350 3350
+$Comp
+L Connector_Generic:Conn_01x05 J1
+U 1 1 5C798D5D
+P 1950 3250
+F 0 "J1" H 1870 2825 50  0000 C CNN
+F 1 "Conn_01x05" H 1870 2916 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1950 3250 50  0001 C CNN
+F 3 "~" H 1950 3250 50  0001 C CNN
+	1    1950 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR0106
+U 1 1 5C798E53
+P 2350 2950
+F 0 "#PWR0106" H 2350 2800 50  0001 C CNN
+F 1 "+BATT" V 2365 3077 50  0000 L CNN
+F 2 "" H 2350 2950 50  0001 C CNN
+F 3 "" H 2350 2950 50  0001 C CNN
+	1    2350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3050 2350 3050
+Wire Wire Line
+	2350 3050 2350 2950
+$Comp
+L blheli_esc:PAD PAD2
+U 1 1 5C799510
+P 7550 2950
+F 0 "PAD2" H 7423 2909 50  0000 R CNN
+F 1 "+" H 7423 3000 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7650 2950 50  0001 C CNN
+F 3 "" H 7650 2950 50  0001 C CNN
+	1    7550 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L blheli_esc:PAD PAD3
+U 1 1 5C799517
+P 7550 3250
+F 0 "PAD3" H 7423 3209 50  0000 R CNN
+F 1 "-" H 7423 3300 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7650 3250 50  0001 C CNN
+F 3 "" H 7650 3250 50  0001 C CNN
+	1    7550 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR0107
+U 1 1 5C79951E
+P 7200 2900
+F 0 "#PWR0107" H 7200 2750 50  0001 C CNN
+F 1 "+BATT" H 7215 3073 50  0000 C CNN
+F 2 "" H 7200 2900 50  0001 C CNN
+F 3 "" H 7200 2900 50  0001 C CNN
+	1    7200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2900 7200 2950
+Wire Wire Line
+	7200 2950 7350 2950
+$Comp
+L power:GND #PWR0108
+U 1 1 5C799526
+P 7200 3300
+F 0 "#PWR0108" H 7200 3050 50  0001 C CNN
+F 1 "GND" H 7205 3127 50  0000 C CNN
+F 2 "" H 7200 3300 50  0001 C CNN
+F 3 "" H 7200 3300 50  0001 C CNN
+	1    7200 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3300 7200 3250
+Wire Wire Line
+	7200 3250 7350 3250
+Wire Wire Line
+	2350 3150 2150 3150
+Wire Wire Line
+	2150 3250 2350 3250
+$EndSCHEMATC

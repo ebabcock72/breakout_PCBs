@@ -1,0 +1,164 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 5C79A5CE
+P 6100 2800
+F 0 "Q1" H 6291 2846 50  0000 L CNN
+F 1 "BC847" H 6291 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6300 2725 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 6100 2800 50  0001 L CNN
+	1    6100 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5C79A6AD
+P 5450 2350
+F 0 "R1" V 5245 2350 50  0000 C CNN
+F 1 "100" V 5336 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5490 2340 50  0001 C CNN
+F 3 "~" H 5450 2350 50  0001 C CNN
+	1    5450 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5C79A6D1
+P 5450 2800
+F 0 "R2" V 5245 2800 50  0000 C CNN
+F 1 "1k" V 5336 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5490 2790 50  0001 C CNN
+F 3 "~" H 5450 2800 50  0001 C CNN
+	1    5450 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5C79A703
+P 5750 3100
+F 0 "R3" H 5818 3146 50  0000 L CNN
+F 1 "100k" H 5818 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5790 3090 50  0001 C CNN
+F 3 "~" H 5750 3100 50  0001 C CNN
+	1    5750 3100
+	1    0    0    -1  
+$EndComp
+Text GLabel 5050 2800 0    50   Input ~ 0
+C_IN
+Text GLabel 6750 2350 2    50   Output ~ 0
+C_OUT
+$Comp
+L power:+BATT #PWR0101
+U 1 1 5C79A8BF
+P 5000 2200
+F 0 "#PWR0101" H 5000 2050 50  0001 C CNN
+F 1 "+BATT" H 5015 2373 50  0000 C CNN
+F 2 "" H 5000 2200 50  0001 C CNN
+F 3 "" H 5000 2200 50  0001 C CNN
+	1    5000 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C79A92C
+P 5750 3400
+F 0 "#PWR0102" H 5750 3150 50  0001 C CNN
+F 1 "GND" H 5755 3227 50  0000 C CNN
+F 2 "" H 5750 3400 50  0001 C CNN
+F 3 "" H 5750 3400 50  0001 C CNN
+	1    5750 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2800 5300 2800
+Wire Wire Line
+	5600 2800 5750 2800
+Wire Wire Line
+	5750 2950 5750 2800
+Connection ~ 5750 2800
+Wire Wire Line
+	5750 2800 5900 2800
+Wire Wire Line
+	5750 3250 5750 3300
+Wire Wire Line
+	6200 3000 6200 3300
+Wire Wire Line
+	6200 3300 5750 3300
+Connection ~ 5750 3300
+Wire Wire Line
+	5750 3300 5750 3400
+Wire Wire Line
+	5600 2350 6200 2350
+Wire Wire Line
+	6200 2600 6200 2350
+Connection ~ 6200 2350
+Wire Wire Line
+	6200 2350 6750 2350
+Wire Wire Line
+	5000 2200 5000 2350
+Wire Wire Line
+	5000 2350 5300 2350
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5C79AD27
+P 1900 2750
+F 0 "J1" H 1820 2325 50  0000 C CNN
+F 1 "Conn_01x04" H 1820 2416 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1900 2750 50  0001 C CNN
+F 3 "~" H 1900 2750 50  0001 C CNN
+	1    1900 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5C79AD9F
+P 2200 2950
+F 0 "#PWR0103" H 2200 2700 50  0001 C CNN
+F 1 "GND" H 2205 2777 50  0000 C CNN
+F 2 "" H 2200 2950 50  0001 C CNN
+F 3 "" H 2200 2950 50  0001 C CNN
+	1    2200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2850 2200 2850
+Wire Wire Line
+	2200 2850 2200 2950
+$Comp
+L power:+BATT #PWR0104
+U 1 1 5C79AEFD
+P 2800 2700
+F 0 "#PWR0104" H 2800 2550 50  0001 C CNN
+F 1 "+BATT" H 2815 2873 50  0000 C CNN
+F 2 "" H 2800 2700 50  0001 C CNN
+F 3 "" H 2800 2700 50  0001 C CNN
+	1    2800 2700
+	1    0    0    -1  
+$EndComp
+Text GLabel 2250 2650 2    50   Output ~ 0
+C_IN
+Text GLabel 2250 2550 2    50   Input ~ 0
+C_OUT
+Wire Wire Line
+	2100 2550 2250 2550
+Wire Wire Line
+	2100 2650 2250 2650
+Wire Wire Line
+	2100 2750 2800 2750
+Wire Wire Line
+	2800 2750 2800 2700
+$EndSCHEMATC
